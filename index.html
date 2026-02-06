@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions with CSS in Js</title>
+    <link rel="shortcut icon" href="onn1.jpeg" type="image/jpeg">
+    
+    <style>
+        body{
+            background-color: rgb(120,170,147);
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+            #on{
+                
+                height: 25px;
+                width: 60px;
+                background-color: black;
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+                
+            }
+            #off{
+               height: 25px;
+                width: 60px;
+                background-color: black;
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #box{
+                height: 250px;
+                width: 250px;
+                background-color: rgb(58, 110, 110);
+                background-image: url(off1.jpeg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(off1.jpeg);
+                border-radius: 10px;
+                
+            }
+            .btn{
+                width: 250px;
+                display: flex;
+                justify-content: space-around;
+                margin-top: 10px;
+            }
+
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Lets On Off the Light</h1>
+    <div class="container">  
+        <div id="box"></div>
+        <div class="btn">
+         <button id="on">on</button> 
+         <button id="off">off</button>
+         </div>
+        </div>
+        </div>
+
+        <script>
+
+            function lightOn(){
+                box.style.backgroundImage="url('onn1.jpeg')";
+                on.style.visibility='hidden'
+                off.style.visibility='visible'
+                
+            }
+            document.getElementById('on').addEventListener('click',lightOn);
+
+            function lightOff(){
+                box.style.backgroundImage="url('off1.jpeg')"; 
+                off.style.visibility='hidden'
+                on.style.visibility='visible'
+            }
+             document.getElementById('off').addEventListener('click',lightOff);
+
+            
+                
+            
+               
+
+        </script>
+</body>
+</html>
